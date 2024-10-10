@@ -1,8 +1,10 @@
 package aksil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.hc.core5.util.Asserts;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TaskOrangeHRM {
@@ -33,7 +35,18 @@ public class TaskOrangeHRM {
         Thread.sleep(2000);
 
         // Locate the login button using its type attribute and click it to log in
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        WebElement dashboardText=driver.findElement(By.xpath("//button[@type='submit']"));
+
+        // Check if the dashboard text element is displayed on the page
+        if (dashboardText.isDisplayed()){
+            // If the element is visible, print "is displayed" to the console
+            System.out.println("Dashboard text is displayed");
+        }else {
+            // If the element is not visible, print "not displayed" to the console
+            System.out.println("Dashboard text is not displayed");
+        }
+        // Click on the dashboard text element (if it's clickable)
+        dashboardText.click();
 
     }
 }
