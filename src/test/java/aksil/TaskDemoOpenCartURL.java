@@ -32,5 +32,6 @@ public class TaskDemoOpenCartURL {
 
         // Close the browser
         driver.close();
+
     }
 }
