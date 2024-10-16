@@ -1,0 +1,11 @@
+
+Header            By tagname           h1
+input text         x path           //input[@name = "my-text"] x path
+password            x path          //input [@type="password"] and //input [@name="my-password"]
+Text Area           name              textarea
+Disabled Input      name               my-disabled/
+Disabled input      xpath              //input[@name='my-disabled']
+Readonly input      xpath               //input[@value="Readonly input"]
+Dropdown(select)    xpath               //select[@name="my-select"]
+Dropdown(datalist)  xpath               //input[@name="my-datalist"]
+file input          xpath               //input[@name="my-file"]

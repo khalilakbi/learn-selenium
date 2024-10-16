@@ -21,5 +21,6 @@ public class HomeWork1 {
         System.out.println(URL);
         // close the browser
         driver.close();
+
     }
 }
