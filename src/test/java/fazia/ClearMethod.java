@@ -6,8 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TypeTextMethod {
+public class ClearMethod {
     public static void main(String[] args) {
+
+
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.lambdatest.com/selenium-playground/simple-form-demo");
@@ -17,18 +19,18 @@ public class TypeTextMethod {
         //type in an input
         String data = "Fazia";
         inputText.sendKeys(data);
-      // inputText.sendKeys("Fazia");
-        // click on webElement
-       WebElement button= driver.findElement(By.id("showInput"));
-       button.click();
-
-       WebElement text= driver.findElement(By.id("message"));
-       String actual= text.getText();
-       if (data.equals(actual)) {
-           System.out.println("Pass");
-       }else{
-           System.out.println("test case Faild");
-       }
+        // clear value fro input
+        inputText.clear();
+        // is selected check box
+        driver.get("https://www.lambdatest.com/selenium-playground/checkbox-demo");
+        WebElement checkBox= driver.findElement(By.id("isAgeSelected"));
+        //return true if element clickable- if we can click on element
+        System.out.println(checkBox.isEnabled());
+        checkBox.click(); // here it will check the checkbox
+        // submit () works only with form if type= submit
+        // return true if element is selected
+        boolean isSel= checkBox.isSelected();
+        System.out.println(isSel);// if i don't click(checkBox.click())it will print false
 
 
 
