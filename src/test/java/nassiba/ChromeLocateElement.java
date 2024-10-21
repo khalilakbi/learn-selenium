@@ -6,16 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TaskThree {
+public class ChromeLocateElement {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.get("https://www.selenium.dev/selenium/web/web-form.html");
-        // locate element:
-        WebElement inputtext = driver.findElement(By.xpath("//input[@type='text']"));
-        String data = "nassiba";
-        inputtext.sendKeys(data);
-
-
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        // locate username:
+        Thread.sleep(2000);
+        WebElement inputtext = driver.findElement(By.name("username"));
+        String data = "admin";
+    inputtext.sendKeys(data);
     }
 }
