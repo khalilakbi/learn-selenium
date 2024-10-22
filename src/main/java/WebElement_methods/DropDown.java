@@ -15,6 +15,7 @@ public class DropDown {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
         WebElement dropDown = driver.findElement(By.name("my-select"));
+        //
         Select select = new Select(dropDown);
         List<WebElement> options= select.getOptions();
         System.out.println(options.get(1).getText());
