@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+public class HomePageHRM {
     // var
 
     WebDriver driver;
@@ -18,7 +18,7 @@ public class HomePage {
     WebElement loginButton;
 
     // constructor
-    public HomePage(WebDriver driver) {
+    public HomePageHRM(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -34,6 +34,12 @@ public class HomePage {
     public void clickOnLogin() {
         loginButton.click();
     }
+    public void doLogin(String username,String password){
+        enterUsername(username);
+        enterPassword(password);
+        clickOnLogin();
+    }
+
 
 
 }

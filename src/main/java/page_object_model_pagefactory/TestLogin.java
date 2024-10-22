@@ -23,10 +23,10 @@ public class TestLogin {
     @Test(priority = 0)
     public void testInvalidLogin() throws InterruptedException {
 
-        page_object_model.HomePage homePage = new HomePage(driver);
-        homePage.enterUsername("rachida");
-        homePage.enterPassword("aksil");
-        homePage.clickOnLoginButton();
+        HomePageHRM homePageHRM = new HomePageHRM(driver);
+        homePageHRM.enterUsername("rachida");
+        homePageHRM.enterPassword("aksil");
+        homePageHRM.clickOnLogin();
 
     }
     @AfterMethod
