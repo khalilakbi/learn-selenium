@@ -13,6 +13,7 @@ public class DropDown {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
         WebElement dropDown = driver.findElement(By.name("my-select"));
+        //
         Select select = new Select(dropDown);
         // select by text
         //select.selectByVisibleText("Three");

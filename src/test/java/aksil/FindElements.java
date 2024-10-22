@@ -13,7 +13,7 @@ public class FindElements {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
-        List<WebElement> checkBox= driver.findElements(By.xpath("//input[@type='checkbox']"));
+        List<WebElement> checkBox = driver.findElements(By.xpath("//input[@type='checkbox']"));
         Thread.sleep(2000);
         checkBox.get(0).click();
         checkBox.get(0).click();
