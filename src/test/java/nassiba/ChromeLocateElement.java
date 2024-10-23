@@ -16,5 +16,9 @@ public class ChromeLocateElement {
         WebElement inputtext = driver.findElement(By.name("username"));
         String data = "admin";
     inputtext.sendKeys(data);
+    Thread.sleep(2000);
+WebElement text = driver.findElement(By.name("password"));
+String password = "admin123";
+inputtext.sendKeys(password);
     }
 }
