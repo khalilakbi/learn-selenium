@@ -11,6 +11,7 @@ public class CloseQuit {
         WebDriver driver = new ChromeDriver();
         driver.get("https://demoqa.com/browser-windows");
 
+
         //code to click on button
         driver.findElement(By.id("tabButton")).click();
 

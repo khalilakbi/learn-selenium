@@ -25,5 +25,6 @@ public class TaskTwo {
         // Close the browser:
         Thread.sleep(2000);
         driver.close();
+
+        }
     }
-}
