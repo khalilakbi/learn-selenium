@@ -31,6 +31,8 @@ public class TestAddEmployer {
 
     @Test(priority = 0)
     public void addEmployee() throws InterruptedException {
+        String user = "peter";
+        String lastName = "test";
 //        String expectedUrl="https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/226";
         EmployerPage employerPage = new EmployerPage(driver);
         employerPage.enterUsername("Admin");
@@ -42,13 +44,15 @@ public class TestAddEmployer {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")));
         employerPage.setClickAdd();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@name='firstName']")));
-        employerPage.enterName("Petter");
-        employerPage.enterMiddleName("MiddleTest");
+        employerPage.enterName(user);
+        employerPage.enterMiddleName(lastName);
         employerPage.enterLastname("LastNameTest");
         employerPage.setClickSave();
        //        String actualURL=driver.getCurrentUrl();
 //        Assert.assertEquals(expectedUrl, actualURL);
 
+      String actualUserText = employerPage.getUserNAme();
+      Assert.assertTrue(actualUserText.contains(user));
 
     }
 

@@ -33,6 +33,9 @@ public class EmployerPage {
     @FindBy(xpath = "//button[@type='submit']")
     WebElement clickSave;
 
+    @FindBy (xpath = "//div[@class='orangehrm-edit-employee-name']//h6")
+    WebElement userName;
+
 
 
     public void enterUsername(String username) {
@@ -64,6 +67,9 @@ public class EmployerPage {
     }
     public void setClickSave(){
         clickSave.click();
+    }
+    public String getUserNAme(){
+        return userName.getText();
     }
 
 
