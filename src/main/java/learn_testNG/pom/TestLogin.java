@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 
 public class TestLogin {
     WebDriver driver;
-    git ad
+
 
     @Parameters("browser")
     @BeforeMethod(alwaysRun = true)
