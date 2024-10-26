@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="orangeHRM">
+    <listeners>
+        <listener class-name="learn_testNG.pom.Listener"></listener>
+    </listeners>
+    <test name="functinal">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="user" value="Admin"></parameter>
+        <parameter name="pass" value="admin123"></parameter>
+        <groups>
+            <run>
+                <include name="regression"></include>
+            </run>
+        </groups>
+        <classes>
+            <!--            class that contain test to be executed package.class-->
+            <class name="learn_testNG.pom.TestLogin"/>
+
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

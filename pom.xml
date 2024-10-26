@@ -26,6 +26,7 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
+<<<<<<< HEAD
 
 <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java &ndash;&gt;-->
 <!--        <dependency>-->
@@ -33,6 +34,8 @@
 <!--            <artifactId>selenium-java</artifactId>-->
 <!--            <version>4.25.0</version>-->
 <!--        </dependency>-->
+=======
+>>>>>>> 5e967b1b275d821559670e1085a3b0de0a7570c9
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -40,6 +43,14 @@
             <version>7.10.2</version>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
+=======
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.1</version>
+        </dependency>
+>>>>>>> 5e967b1b275d821559670e1085a3b0de0a7570c9
 
     </dependencies>
 
