@@ -3,6 +3,7 @@
 *.iml
 /out
 .idea
+/screen_shot
 # Compiled class file
 *.class
 

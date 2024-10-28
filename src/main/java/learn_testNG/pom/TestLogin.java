@@ -10,7 +10,6 @@ import org.testng.annotations.*;
 public class TestLogin {
     WebDriver driver;
 
-
     @Parameters("browser")
     @BeforeMethod(alwaysRun = true)
     public void setUp(@Optional("chrome") String browser) {
