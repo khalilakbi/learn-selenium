@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TaskTwo {
+<<<<<<< HEAD
+    public static void main(String[] args){
+=======
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -25,6 +28,7 @@ public class TaskTwo {
         // Close the browser:
         Thread.sleep(2000);
         driver.close();
+>>>>>>> 5e967b1b275d821559670e1085a3b0de0a7570c9
 
         }
     }
