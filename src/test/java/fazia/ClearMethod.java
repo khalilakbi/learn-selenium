@@ -32,8 +32,5 @@ public class ClearMethod {
         boolean isSel= checkBox.isSelected();
         System.out.println(isSel);// if i don't click(checkBox.click())it will print false
 
-
-
-
     }
 }
