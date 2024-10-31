@@ -24,14 +24,17 @@ public class HomePageHRM {
     }
 
     public void enterUsername(String username) {
+
         inputUsername.sendKeys(username);
     }
 
     public void enterPassword(String password) {
+
         inputPassword.sendKeys(password);
     }
 
     public void clickOnLogin() {
+
         loginButton.click();
     }
     public void doLogin(String username,String password){

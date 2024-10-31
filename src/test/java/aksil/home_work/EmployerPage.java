@@ -1,4 +1,4 @@
-package solution.orangeHRM;
+package aksil.home_work;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class EmployerPage {
 
     WebDriver driver;
+
     public EmployerPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -32,9 +33,8 @@ public class EmployerPage {
     @FindBy(xpath = "//button[@type='submit']")
     WebElement clickSave;
 
-    @FindBy (xpath = "//div[@class='orangehrm-edit-employee-name']//h6")
+    @FindBy(xpath = "//div[@class='orangehrm-edit-employee-name']//h6")
     WebElement userName;
-
 
 
     public void enterUsername(String username) {
@@ -48,26 +48,32 @@ public class EmployerPage {
     public void clickOnLogin() {
         loginButton.click();
     }
-    public void setClickPIM(){
+
+    public void setClickPIM() {
         clickPIM.click();
     }
-    public void setClickAdd(){
+
+    public void setClickAdd() {
         clickAdd.click();
     }
 
     public void enterName(String name) {
         inputFirstName.sendKeys(name);
     }
-    public void enterMiddleName(String middleName){
+
+    public void enterMiddleName(String middleName) {
         inputMiddleName.sendKeys(middleName);
     }
-    public void enterLastname(String lastName){
+
+    public void enterLastname(String lastName) {
         inputLastName.sendKeys(lastName);
     }
-    public void setClickSave(){
+
+    public void setClickSave() {
         clickSave.click();
     }
-    public String getUserNAme(){
+
+    public String getUserNAme() {
         return userName.getText();
     }
 
