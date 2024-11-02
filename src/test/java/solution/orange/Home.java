@@ -38,7 +38,7 @@ public class Home {
         loginButton.click();
     }
 
-    public void doLogin(String username, String password) {
+     public void doLogin(String username, String password) {
         enterUsername(username);
         enterPassword(password);
         clickOnLogin();

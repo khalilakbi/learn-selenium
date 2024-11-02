@@ -27,6 +27,8 @@ public class TestLogin {
         homePageHRM.enterUsername("rachida");
         homePageHRM.enterPassword("aksil");
         homePageHRM.clickOnLogin();
+        homePageHRM.doLogin("rachida","aksil");
+
 
     }
     @AfterMethod

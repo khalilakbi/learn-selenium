@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="orangeHRM">
+    <test name="functinal">
+        <classes>
+            <class name="fazia_TestNG.page_object_model.TestLogin"/>
+            <class name="fazia_TestNG.SearchEmployee"></class>
+
+
+
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
