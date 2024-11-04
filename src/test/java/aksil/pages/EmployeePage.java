@@ -1,19 +1,15 @@
-package aksil.home_work;
+package aksil.pages;
 
-import org.openqa.selenium.WebDriver;
+import aksil.base.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class EmployerPage {
+public class EmployeePage extends Base {
 
-    WebDriver driver;
-
-    public EmployerPage(WebDriver driver) {
-        this.driver = driver;
+    public EmployeePage() {
         PageFactory.initElements(driver, this);
     }
-
     @FindBy(name = "username")
     WebElement inputUsername;
     @FindBy(name = "password")
@@ -32,24 +28,28 @@ public class EmployerPage {
     WebElement inputLastName;
     @FindBy(xpath = "//button[@type='submit']")
     WebElement clickSave;
-
     @FindBy(xpath = "//div[@class='orangehrm-edit-employee-name']//h6")
     WebElement userName;
-
+    @FindBy(xpath = "//span[text()='Required']")
+    WebElement requiredMSG;
 
     public void enterUsername(String username) {
+
         inputUsername.sendKeys(username);
     }
 
     public void enterPassword(String password) {
+
         inputPassword.sendKeys(password);
     }
 
     public void clickOnLogin() {
+
         loginButton.click();
     }
 
     public void setClickPIM() {
+
         clickPIM.click();
     }
 
@@ -76,6 +76,9 @@ public class EmployerPage {
     public String getUserNAme() {
         return userName.getText();
     }
+    public boolean isRequiredMSG(){
+        return requiredMSG.isDisplayed();
+    }
 
 
     public void doAddEmployee(String username, String password, String name) {
@@ -85,6 +88,8 @@ public class EmployerPage {
         clickOnLogin();
         setClickPIM();
         setClickAdd();
+        getUserNAme();
+        isRequiredMSG();
 
     }
 

@@ -1,5 +1,8 @@
-package aksil.home_work;
+package aksil.system;
 
+import aksil.base.Base;
+import aksil.pages.AccountPage;
+import aksil.pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,29 +14,21 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class TestLogout {
-    WebDriver driver;
+public class TestLogout extends Base {
 
-    @BeforeMethod
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        driver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.name("username")));
-    }
-
-    @Test
+      @Test
     public void testValidLogout() {
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
+        AccountPage accountPage= new AccountPage();
+       // homePage.doLogin("Admin","admin123");
         homePage.enterUsername("Admin");
         homePage.enterPassword("admin123");
         homePage.clickOnLogin();
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+
+
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[@class='oxd-userdropdown-name']")));
-        homePage.clickOnDropdown();
+        accountPage.clickOnDropdown();
         homePage.selectLogOut();
         String actualUrl = driver.getCurrentUrl();
         //Assertion
