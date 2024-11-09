@@ -31,6 +31,8 @@ public class TestLogin {
        String actualTitle=  accountPage.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
     }
+
+
     @Test (priority = 1)
     public void testInvalidLogin() throws InterruptedException {
         String expectedMSG= "Invalid credentials";
