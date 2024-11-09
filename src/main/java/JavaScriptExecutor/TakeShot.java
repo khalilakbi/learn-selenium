@@ -24,4 +24,5 @@ public class TakeShot {
         FileUtils.copyFile(source,new File(path));
 
     }
+    //C:\Users\aksil amina\Desktop\final selenium\learn-selenium\Screen_shot\First_Screen_Shot.png
 }
